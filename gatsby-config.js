@@ -28,13 +28,6 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `slides`,
-                path: `${__dirname}/slides`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
                 name: `exercises`,
                 path: `${__dirname}/exercises`,
             },
@@ -92,6 +85,12 @@ module.exports = {
                 theme_color: meta.theme,
                 display: `minimal-ui`,
                 icon: `static/icon.png`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-plausible`,
+            options: {
+                domain: meta.domain,
             },
         },
         `gatsby-plugin-offline`,
