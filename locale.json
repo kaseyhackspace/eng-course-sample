@@ -1,11 +1,11 @@
 {
     "en": {
         "langName": "English",
-        "title": "My cool online course",
-        "slogan": "A free online course",
+        "title": "Python for Civil Engineers",
+        "slogan": "For Civil Engineers who have a knack for code",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec velit nec, consectetur placerat enim.",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec velit nec, consectetur placerat enim.",
-        "video": "THduWAnG97k",
+        "bio": "Bio of the author of the course",
+        "video": "hVFjJJLJizA",
         "footerLinks": [
             {
                 "text": "spaCy Website",
@@ -46,9 +46,9 @@
             "video": "Video",
             "slides": "Slides",
             "alert": {
-                "title": "This course uses spaCy v2.",
-                "text": "An updated version for the new spaCy v3 is coming soon. Luckily, the usage and API hasn't changed much, so everything you'll learn in this course is still relevant.",
-                "button": "See what's new in v3"
+                "title": "This course uses numpy",
+                "text": "numpy is a package for high performance scientific computing in Python. To learn more about numpy, checkout the",
+                "button": "quickstart on numpy here"
             }
         }
     },

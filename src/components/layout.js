@@ -63,7 +63,7 @@ const Layout = ({ isHome, title, description, lang, pageName, logo, children }) 
                         {alert && (
                                 <aside className={classes.alert}>
                                     <strong>{alert.title}</strong> {alert.text}{' '}
-                                    <Link to="https://spacy.io/usage/v3">
+                                    <Link to="https://numpy.org/doc/stable/user/quickstart.html">
                                         {alert.button} &rarr;
                                     </Link>
                                 </aside>

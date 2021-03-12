@@ -1,39 +1,39 @@
 ---
-title: 'Chapter 1: Getting started'
+title: 'Chapter 1: Beam me up Scotty!'
 description:
-  'This chapter will teach you about many cool things and introduce you to the
-  most important concepts of the course.'
+  'This chapter will be all about beams'
 prev: null
 next: /chapter2
 type: chapter
 id: 1
 ---
 
-<exercise id="1" title="Introduction" type="slides">
+<exercise id="1" title="Introduction" type="slides,video">
 
-<slides source="chapter1_01_introduction">
+<slides source="chapter1_01_introduction" start="0:09" end="4:30">
 </slides>
-
+This chapter will teach you about many cool things and introduce you to the
+  most important concepts of the course.
 </exercise>
 
-<exercise id="2" title="Getting Started">
+<exercise id="2" title="Quiz 1">
 
-Let's ask some questions about the slides. Whats the correct answer?
+What is a simply supported beam?
 
 <choice>
-<opt text="Answer one">
+<opt text="A beam where the end portion extends beyond the support.">
 
 This is not the correct answer.
 
 </opt>
 
-<opt text="Answer two" correct="true">
+<opt text="Beam rests on two supports and is free to move horizontally." correct="true">
 
 Good job!
 
 </opt>
 
-<opt text="Answer three">
+<opt text="a rigid structural element that is supported at one end and free at the other">
 
 This is not correct either.
 
@@ -42,15 +42,45 @@ This is not correct either.
 
 </exercise>
 
-<exercise id="3" title="First steps">
+<exercise id="3" title="Calculating internal forces of a simply supported beam">
 
-This is a code exercise. The content can be formatted in simple Markdown – so
-you can have **bold text**, `code` or [links](https://spacy.io) or lists, like
-the one for the instructions below.
+This example shows how to calculate the bending moment and shear of a simply supported beam using `numpy`.
 
-- These are instructions and they can have bullet points.
-- The code block below will look for the files `exc_01_03`, `solution_01_03` and
-  `test_01_03` in `/exercises`.
+<img src="/beam_example1.png" alt="Simply supported beam image" width="75%">
+
+Given the parameters:
+
+`q=20 kN/m`
+
+`l=5m`
+
+Solution:
+
+First we need to import the numpy library and set the given parameters:
+
+``` python
+import numpy as np
+
+q = 20
+l = 5
+```
+
+We then use the numpy library to create an evenly spaced array betwen 0 to `l`, with a size of 20:
+
+```python
+x = np.linspace(0,l,20)
+```
+
+Once the array `x` has been generated, we now compute for moment `M` and shear `V`. We just need to write the formula normally in `python` syntax, and `numpy` will apply the formula to all the elements of `x`.
+
+```python
+M = q/2*(l*x-x**2)
+V = q*(1/2-x)
+```
+
+`M `and `V` will have a type of `np.array` and will have the moment and shear at each point of `x`.
+
+Fill in  the code below for yourself and press `Run code` to see the output:
 
 <codeblock id="01_03">
 

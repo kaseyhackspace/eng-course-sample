@@ -1,5 +1,7 @@
 .vscode
 
+binder/env/*
+
 # Logs
 logs
 *.log
